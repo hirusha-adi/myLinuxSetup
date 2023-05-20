@@ -2,4 +2,6 @@ from __utils import Base
 
 
             
-Base.askExecute("dsfsd", "echo 3ew45tr4e5ydfg")
+Base.askExecute("Update Repos", "sudo apt update")
+Base.askExecute("Upgrade System", "sudo apt upgrade")
+Base.askExecute("Install Chrome?", "sudo apt upgrade")
