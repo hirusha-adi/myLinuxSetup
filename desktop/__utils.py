@@ -2,6 +2,7 @@ import re
 import subprocess
 import os
 import typing as t
+from pyfiglet import print_figlet
 
 class Base:
     @staticmethod
@@ -13,4 +14,7 @@ class Base:
             else:
                 for cmnd in command:
                     subprocess.run(cmnd, shell=True)
-                    
+    
+    @staticmethod
+    def banner(text):
+        print_figlet(text, font='rounded') # or 'epic'
