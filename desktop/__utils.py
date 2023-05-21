@@ -18,3 +18,14 @@ class Base:
     @staticmethod
     def banner(text):
         print_figlet(text, font='rounded') # or 'epic'
+
+    @staticmethod
+    def archInstallYay():
+        os.system("git clone https://aur.archlinux.org/yay.git")
+        os.chdir(os.path.join(os.getcwd(), "yay"))
+        os.system("makepkg -si")
+        os.chdir("..")
+        os.remove(os.path.join(os.getcwd(), "yay"))
+    
+    
+    
