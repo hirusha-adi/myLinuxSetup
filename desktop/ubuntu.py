@@ -22,6 +22,35 @@ Base.askExecute("Install Firefox", "sudo apt install firefox -y")
 Base.askExecute("Install ffmpegthumbs", "sudo apt install ffmpegthumbs -y")
 Base.askExecute("Install mplayerthumbs", "sudo apt install mplayerthumbs -y")
 Base.askExecute("Install qbittorrent", "sudo apt install qbittorrent -y")
+Base.askExecute("Install RawTherapee", "sudo apt install rawtherapee -y")
+Base.askExecute("Install KdenLive", "sudo apt install kdenlive -y")
+Base.askExecute("Install OpenShot", "sudo apt install openshot-qt -y")
+Base.askExecute("Install Audacity", "sudo apt install audacity -y")
+Base.askExecute("Install HandBrake", "sudo apt install handbrake -y")
+Base.askExecute("Install KDE-Connect", "sudo apt install kdeconnect -y")
+Base.askExecute("Install yt-dlp", "sudo apt install yt-dlp -y")
+Base.askExecute("Install Shotcut", "sudo apt install shotcut -y")
+Base.askExecute("Install Yakuake", "sudo apt install yakuake -y")
+Base.askExecute("Install Guake", "sudo apt install guake -y")
+Base.askExecute("Install flatpak", "sudo apt install flatpak -y")
+Base.askExecute("Install Pinta", "sudo apt install pinta -y")
+Base.askExecute("Install neofetch", "sudo apt install neofetch -y")
+Base.askExecute("Install bpytop", "sudo apt install bpytop -y")
+Base.askExecute("Install Bitwarden", [
+    'wget "https://vault.bitwarden.com/download/?app=desktop&platform=linux&variant=deb" -o "Bitwarden.deb"',
+    "sudo dpkg -i ./Bitwarden.deb",
+    "sudo apt install --fix-broken -y"
+])
+Base.askExecute("Install HandBrake", [
+    'wget "https://github.com/oguzhaninan/Stacer/releases/download/v1.1.0/stacer_1.1.0_amd64.deb" -o "stacer_1.1.0_amd64.deb"',
+    "sudo dpkg -i ./stacer_1.1.0_amd64.deb",
+    "sudo apt install --fix-broken -y",
+])
+Base.askExecute("Install Telegram", [
+    "sudo add-apt-repository ppa:atareao/telegram",
+    "sudo apt update",
+    "sudo apt install telegram -y"
+])
 Base.askExecute("Install TeamViwer?", [
     'wget "https://download.teamviewer.com/download/linux/teamviewer_amd64.deb" -o "teamviewer_amd64.deb"',
     "sudo dpkg -i ./teamviewer_amd64.deb",
@@ -57,17 +86,19 @@ Base.askExecute("Install Discord", [
     "sudo dpkg -i ./discord.deb",
     "sudo apt install --fix-broken -y"
 ])
-Base.askExecute("Install Bitwarden", [
-    'wget "https://vault.bitwarden.com/download/?app=desktop&platform=linux&variant=deb" -o "Bitwarden.deb"',
-    "sudo dpkg -i ./Bitwarden.deb",
+Base.askExecute("Install Balena Etcher", [
+    'wget "https://github.com/balena-io/etcher/releases/download/v1.18.4/balena-etcher_1.18.4_amd64.deb" -o "balena-etcher_1.18.4_amd64.deb"',
+    "sudo dpkg -i ./balena-etcher_1.18.4_amd64.deb",
     "sudo apt install --fix-broken -y"
-    ])
+])
+Base.askExecute("Install keepassxc", "sudo apt install keepassxc -y")
 
 
 
 
 
 # developer tools
+Base.askExecute("Install git", "sudo apt install git -y")
 Base.askExecute("Install Docker", [
     'sudo apt-get remove docker docker-engine docker.io containerd runc -y',
     'sudo apt-get update',
@@ -93,4 +124,12 @@ Base.askExecute("Install Visual Studio Code", [
     'sudo apt update',
     'sudo apt install code -y'
 ])
+Base.askExecute("Install VirtualBox", "sudo apt install virtualbox -y")
+Base.askExecute("Install OpenJDK v8", "sudo apt install openjdk-8-jdk -y")
+Base.askExecute("Install NodeJS", "sudo apt install nodejs -y")
+Base.askExecute("Install NPM", "sudo apt install npm -y")
+Base.askExecute("Install tcl", "sudo apt install tcl -y")
+Base.askExecute("Install fpc", "sudo apt install fpc -y")
+Base.askExecute("Install NotepadQQ", "sudo apt install notepadqq -y")
+Base.askExecute("Install codeblocks", "sudo apt install codeblocks -y")
 
