@@ -7,6 +7,7 @@ Base.askExecute("Upgrade System", "sudo apt upgrade")
 
 
 
+Base.banner('Browsers')
 Base.askExecute("Install Chrome (Browser)", [
     'wget "https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb" -o "google-chrome-stable_current_amd64.deb"',
     "sudo dpkg -i ./google-chrome-stable_current_amd64.deb",
@@ -22,14 +23,20 @@ Base.askExecute("Install Firefox (Browser)", "sudo apt install firefox -y")
 
 
 
+Base.banner('Utilities')
 Base.askExecute("Install Yakuake (Utils) (for KDE)", "sudo apt install yakuake -y")
 Base.askExecute("Install Guake (Utils) (for GNOME)", "sudo apt install guake -y")
 Base.askExecute("Install ffmpegthumbs (Utils)", "sudo apt install ffmpegthumbs -y")
 Base.askExecute("Install mplayerthumbs (Utils)", "sudo apt install mplayerthumbs -y")
 Base.askExecute("Install qbittorrent (Torrenting)", "sudo apt install qbittorrent -y")
 
+# Base.banner('??') 
+Base.askExecute("Install KDE-Connect (Phone Sync)", "sudo apt install kdeconnect -y")
+Base.askExecute("Install flatpak (Package Manager)", "sudo apt install flatpak -y")
 
 
+
+Base.banner('Media')
 Base.askExecute("Install Audacity (Audio Editor)", "sudo apt install audacity -y")
 Base.askExecute("Install RawTherapee (Image Editor)", "sudo apt install rawtherapee -y")
 Base.askExecute("Install Pinta (Image Editor)", "sudo apt install pinta -y")
@@ -47,11 +54,7 @@ Base.askExecute("Install Spotify (Music player)", [
 
 
 
-Base.askExecute("Install KDE-Connect (Phone Sync)", "sudo apt install kdeconnect -y")
-Base.askExecute("Install flatpak (Package Manager)", "sudo apt install flatpak -y")
-
-
-
+Base.banner('System Monitor')
 Base.askExecute("Install neofetch (System Monitor)", "sudo apt install neofetch -y")
 Base.askExecute("Install bpytop (System Monitor)", "sudo apt install bpytop -y")
 Base.askExecute("Install Stacer (System Monitor)", [
@@ -62,6 +65,7 @@ Base.askExecute("Install Stacer (System Monitor)", [
 
 
 
+Base.banner('Password Manager')
 Base.askExecute("Install Bitwarden (Password Manager)", [
     'wget "https://vault.bitwarden.com/download/?app=desktop&platform=linux&variant=deb" -o "Bitwarden.deb"',
     "sudo dpkg -i ./Bitwarden.deb",
@@ -71,6 +75,7 @@ Base.askExecute("Install KeepassXC (Password Manager)", "sudo apt install keepas
 
 
 
+Base.banner('Messaging')
 Base.askExecute("Install Telegram (Messaging)", [
     "sudo add-apt-repository ppa:atareao/telegram",
     "sudo apt update",
@@ -84,6 +89,7 @@ Base.askExecute("Install Discord (Messaging)", [
 
 
 
+Base.banner('Remote Desktop')
 Base.askExecute("Install TeamViwer (Remote Desktop)", [
     'wget "https://download.teamviewer.com/download/linux/teamviewer_amd64.deb" -o "teamviewer_amd64.deb"',
     "sudo dpkg -i ./teamviewer_amd64.deb",
@@ -98,6 +104,7 @@ Base.askExecute("Install AnyDesk (Remote Desktop)", [
 
 
 
+Base.banner('Flasher')
 Base.askExecute("Install Balena Etcher (Flasher)", [
     'wget "https://github.com/balena-io/etcher/releases/download/v1.18.4/balena-etcher_1.18.4_amd64.deb" -o "balena-etcher_1.18.4_amd64.deb"',
     "sudo dpkg -i ./balena-etcher_1.18.4_amd64.deb",
@@ -112,6 +119,7 @@ Base.askExecute("Install UNetbootin (Flasher)", [
 
 
 
+Base.banner('Development')
 Base.askExecute("Install Git (Development)", "sudo apt install git -y")
 Base.askExecute("Install Docker (Development)", [
     'sudo apt-get remove docker docker-engine docker.io containerd runc -y',
