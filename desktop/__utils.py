@@ -21,6 +21,7 @@ class Base:
 
     @staticmethod
     def archInstallYay():
+        os.system("sudo pacman -Sy base-devel --no-confirm")
         os.system("git clone https://aur.archlinux.org/yay.git")
         os.chdir(os.path.join(os.getcwd(), "yay"))
         os.system("makepkg -si")
