@@ -15,3 +15,17 @@
     ├── jellyfin.sh         <- install Jellyfin Server
     └── ssh-setup.sh        <- start SSH Server
 ```
+
+# Initial Setup
+
+### Arch Linux
+
+```
+sudo pacman -Sy python python2 python-pip base-devel wget curl git --no-confirm
+```
+
+### Ubuntu
+
+```
+sudo apt install update && sudo apt install python3 python3-pip git curl wget -y
+```
